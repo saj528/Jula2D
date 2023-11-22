@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="508db840-0cd0-4c60-a5b0-219081b5e191" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jula2d/LevelEditorScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jula2d/LevelScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jula2d/Scene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/Time.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/shaders/default.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jula2d/KeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jula2d/KeyListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jula2d/MouseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jula2d/MouseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jula2d/LevelEditorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jula2d/LevelEditorScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jula2d/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jula2d/Scene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jula2d/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jula2d/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
