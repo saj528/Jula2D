@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="508db840-0cd0-4c60-a5b0-219081b5e191" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jula2d/LevelEditorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jula2d/LevelEditorScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jula2d/LevelScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jula2d/LevelScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/shaders/default.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/shaders/default.glsl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

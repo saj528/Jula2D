@@ -79,6 +79,8 @@ public class LevelEditorScene extends Scene {
         // Check for errors in compilation
         int success = glGetShaderi(vertexID, GL_COMPILE_STATUS);
         if (success == GL_FALSE) {
+            // glGetShaderi returns the length of the string. the i stands for info.
+            // in C to print a string you need the length
             int len = glGetShaderi(vertexID, GL_INFO_LOG_LENGTH);
             System.out.println("ERROR: 'defaultShader.glsl'\n\tVertex shader compilation failed.");
             System.out.println(glGetShaderInfoLog(vertexID, len));
@@ -118,10 +120,14 @@ public class LevelEditorScene extends Scene {
         // ============================================================
         // Generate VAO, VBO, and EBO buffer objects, and send to GPU
         // ============================================================
+
+        // creating the VAO and assigning its ID to vaoID
         vaoID = glGenVertexArrays();
+        // binding the VAO to the GL context
         glBindVertexArray(vaoID);
 
         // Create a float buffer of vertices
+        // I believe this creates a copy of the vertex data and reverses it to read it
         FloatBuffer vertexBuffer = BufferUtils.createFloatBuffer(vertexArray.length);
         vertexBuffer.put(vertexArray).flip();
 
@@ -139,10 +145,20 @@ public class LevelEditorScene extends Scene {
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, elementBuffer, GL_STATIC_DRAW);
 
         // Add the vertex attribute pointers
+        // positionSize is 3 for x,y,z
+        // colorSize is 4 for r,g,b,a
+        // floatSizeBytes is just how many bytes a float is which is important for C
+        // vertexSizeBytes is just the stride * the size of each elements bytes
+        // stride is just all the elements that comprise a vertex
         int positionsSize = 3;
         int colorSize = 4;
         int floatSizeBytes = 4;
         int vertexSizeBytes = (positionsSize + colorSize) * floatSizeBytes;
+
+        // the next four lines are just letting opengl know the two attributes in the vertex
+        // the arguments for glVertexAttribPointer are the following
+        // index, length of attribute elements, datatype, normalized, stride, and offset
+        // the index is the location in the GLSL shader
         glVertexAttribPointer(0, positionsSize, GL_FLOAT, false, vertexSizeBytes, 0);
         glEnableVertexAttribArray(0);
 
@@ -161,14 +177,17 @@ public class LevelEditorScene extends Scene {
         glEnableVertexAttribArray(0);
         glEnableVertexAttribArray(1);
 
+
+        // arguments - type of shape to draw, number of indices, datatype of elements in array, indices to start at
         glDrawElements(GL_TRIANGLES, elementArray.length, GL_UNSIGNED_INT, 0);
 
         // Unbind everything
         glDisableVertexAttribArray(0);
         glDisableVertexAttribArray(1);
 
+        // this signifies to opengl to bind nothing
         glBindVertexArray(0);
-
+        // this signifies to opengl to use nothing as program
         glUseProgram(0);
     }
 }
